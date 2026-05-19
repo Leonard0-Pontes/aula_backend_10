@@ -10,21 +10,9 @@ exports.ProdutosService = void 0;
 const common_1 = require("@nestjs/common");
 let ProdutosService = class ProdutosService {
     produtos = [
-        {
-            id: 1,
-            nome: 'Notebook',
-            categoria: 'hardware',
-            preco: 3500,
-            ativo: true,
-        },
+        { id: 1, nome: 'Notebook', categoria: 'hardware', preco: 3500, ativo: true },
         { id: 2, nome: 'Mouse', categoria: 'hardware', preco: 120, ativo: true },
-        {
-            id: 3,
-            nome: 'Curso NestJS',
-            categoria: 'educacao',
-            preco: 89,
-            ativo: false,
-        },
+        { id: 3, nome: 'Curso NestJS', categoria: 'educacao', preco: 89, ativo: false },
     ];
     listar(categoria, limite) {
         let resultado = [...this.produtos];

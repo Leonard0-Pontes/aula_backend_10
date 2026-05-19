@@ -12,13 +12,12 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const produtos_module_1 = require("./produtos/produtos.module");
 const tarefas_module_1 = require("./tarefas/tarefas.module");
-const reservas_module_1 = require("./reservas/reservas.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [produtos_module_1.ProdutosModule, tarefas_module_1.TarefasModule, reservas_module_1.ReservasModule],
+        imports: [produtos_module_1.ProdutosModule, tarefas_module_1.TarefasModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

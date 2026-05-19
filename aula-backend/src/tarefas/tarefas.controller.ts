@@ -1,15 +1,4 @@
-import {
-  Put,
-  DefaultValuePipe,
-  ParseIntPipe,
-  Controller,
-  Get,
-  Post,
-  Query,
-  Param,
-  Body,
-  Patch,
-  Delete,
+import {  Put, DefaultValuePipe, ParseIntPipe, Controller, Get, Post, Query, Param, Body, Patch, Delete,
 } from '@nestjs/common';
 import { TarefasService } from './tarefas.service';
 import { CreateTarefasDto } from './dto/create-tarefas.dto';

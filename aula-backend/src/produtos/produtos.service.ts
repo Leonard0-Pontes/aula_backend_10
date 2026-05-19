@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
@@ -9,37 +8,14 @@ type Produto = {
   categoria: string;
   preco: number;
   ativo: boolean;
-=======
-import { Injectable } from '@nestjs/common';
-
-type Produto = {
-    id: number;
-    nome: string;
-    categoria: string;
-    preco: number;
-    ativo: boolean;
->>>>>>> cec27d9 (aula 10 04)
 };
 
 @Injectable()
 export class ProdutosService {
-<<<<<<< HEAD
   private produtos: Produto[] = [
-    {
-      id: 1,
-      nome: 'Notebook',
-      categoria: 'hardware',
-      preco: 3500,
-      ativo: true,
-    },
+    { id: 1, nome: 'Notebook', categoria: 'hardware', preco: 3500, ativo: true },
     { id: 2, nome: 'Mouse', categoria: 'hardware', preco: 120, ativo: true },
-    {
-      id: 3,
-      nome: 'Curso NestJS',
-      categoria: 'educacao',
-      preco: 89,
-      ativo: false,
-    },
+    { id: 3, nome: 'Curso NestJS', categoria: 'educacao', preco: 89, ativo: false },
   ];
 
   listar(categoria?: string, limite?: number) {
@@ -107,22 +83,4 @@ export class ProdutosService {
     this.produtos = this.produtos.filter((p) => p.id !== id);
     return { mensagem: `Produto ${id} removido com sucesso` };
   }
-=======
-    private produtos: Produto[] = [
-        {id: 1, nome: 'Notebook', categoria: 'Eletrônicos', 
-            preco: 2500, ativo: true},
-        {id: 2, nome: 'Smartphone', categoria: 'Eletrônicos', 
-            preco: 1500, ativo: true},    
-        {id: 3, nome: 'Curso NestJS', categoria: 'Educação', 
-            preco: 300, ativo: true}        
-    ];
-
-    listarTodos(){
-        return this.produtos;
-    }
-    
-    listarPorCategoria(categoria: string){
-        return this.produtos.filter((p) => p.categoria === categoria);
-    }
->>>>>>> cec27d9 (aula 10 04)
 }

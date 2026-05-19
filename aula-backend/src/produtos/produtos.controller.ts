@@ -1,27 +1,22 @@
-<<<<<<< HEAD
 import {
-  DefaultValuePipe,
+  Body,
   Controller,
+  DefaultValuePipe,
+  Delete,
   Get,
   Param,
-  Query,
-  Post,
-  Body,
-  Put,
-  Patch,
-  Delete,
   ParseIntPipe,
+  Patch,
+  Post,
+  Put,
+  Query,
 } from '@nestjs/common';
 import { CreateProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
-=======
-import {BadRequestException, Controller, Get, Query } from '@nestjs/common';
->>>>>>> cec27d9 (aula 10 04)
 import { ProdutosService } from './produtos.service';
 
 @Controller('produtos')
 export class ProdutosController {
-<<<<<<< HEAD
   constructor(private readonly produtosService: ProdutosService) {}
 
   @Get()
@@ -62,19 +57,4 @@ export class ProdutosController {
   remover(@Param('id', ParseIntPipe) id: number) {
     return this.produtosService.remover(id);
   }
-=======
-    constructor(private readonly produtosService: ProdutosService){}
-
-
-    
-    @Get()
-    listar(@Query('categoria') categoria?: string){
-        if(!categoria){
-           return this.produtosService.listarTodos(); 
-        } 
-        
-        return this.produtosService.listarPorCategoria(categoria);
-        
-    }
->>>>>>> cec27d9 (aula 10 04)
 }
