@@ -1,4 +1,16 @@
-import { BadRequestException, DefaultValuePipe, Controller, Get, Param, Query, Post, Body, Put, Patch, Delete, ParseIntPipe } from '@nestjs/common';
+import {
+  DefaultValuePipe,
+  Controller,
+  Get,
+  Param,
+  Query,
+  Post,
+  Body,
+  Put,
+  Patch,
+  Delete,
+  ParseIntPipe,
+} from '@nestjs/common';
 import { CreateProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
 import { ProdutosService } from './produtos.service';

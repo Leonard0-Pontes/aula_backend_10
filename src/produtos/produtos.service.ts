@@ -13,9 +13,21 @@ type Produto = {
 @Injectable()
 export class ProdutosService {
   private produtos: Produto[] = [
-    { id: 1, nome: 'Notebook', categoria: 'hardware', preco: 3500, ativo: true },
+    {
+      id: 1,
+      nome: 'Notebook',
+      categoria: 'hardware',
+      preco: 3500,
+      ativo: true,
+    },
     { id: 2, nome: 'Mouse', categoria: 'hardware', preco: 120, ativo: true },
-    { id: 3, nome: 'Curso NestJS', categoria: 'educacao', preco: 89, ativo: false },
+    {
+      id: 3,
+      nome: 'Curso NestJS',
+      categoria: 'educacao',
+      preco: 89,
+      ativo: false,
+    },
   ];
 
   listar(categoria?: string, limite?: number) {

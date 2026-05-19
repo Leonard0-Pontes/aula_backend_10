@@ -1,7 +1,13 @@
-import { Min, IsNotEmpty, IsNumber, IsString, IsOptional, Max } from 'class-validator';
+import {
+  Min,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  IsOptional,
+  Max,
+} from 'class-validator';
 
 export class CreateTarefasDto {
-  
   @IsString()
   @IsNotEmpty()
   titulo!: string;
@@ -10,10 +16,10 @@ export class CreateTarefasDto {
   @IsNotEmpty()
   @IsOptional()
   descricao!: string;
-  
+
   @IsString()
   @IsNotEmpty()
-    status!: 'aberta' | 'em_andamento' | 'concluida';
+  status!: 'aberta' | 'em_andamento' | 'concluida';
 
   @IsNumber()
   @Min(1)
